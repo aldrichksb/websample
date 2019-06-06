@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>My Example</title>
+
+<!-- CSS -->
+<style>
+.myForm {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.8em;
+width: 20em;
+padding: 1em;
+border: 1px solid #ccc;
+}
+
+.myForm * {
+box-sizing: border-box;
+}
+
+.myForm fieldset {
+border: none;
+padding: 0;
+}
+
+.myForm legend,
+.myForm label {
+padding: 0;
+font-weight: bold;
+}
+
+.myForm label.choice {
+font-size: 0.9em;
+font-weight: normal;
+}
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="email"],
+.myForm input[type="datetime-local"],
+.myForm select,
+.myForm textarea {
+display: block;
+width: 100%;
+border: 1px solid #ccc;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.9em;
+padding: 0.3em;
+}
+
+.myForm textarea {
+height: 100px;
+}
+
+.myForm button {
+padding: 1em;
+border-radius: 0.5em;
+background: #eee;
+border: none;
+font-weight: bold;
+margin-top: 1em;
+}
+
+.myForm button:hover {
+background: #ccc;
+cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+      <p><a href="index.html">Sammy Student</a></p>
+	    <nav>
+	      <ul>
+          <li><a id="About" name="AboutLink" href="about.html">About</a></li>
+          <li><a id="Activities" name="ActivitiesLink" href="activities.html">Activities</a></li>
+          <li><a id="Experience" name="ExperienceLink" href="experience.html">Experience</a></li>
+		      <li><a id="Contact" name="ContactLink" href="contact.html">Contact</a></li>
+			  <li><a id="Formulario" name="FormularioLink" href="formulario.html">Formulario</a></li>
+		    </ul>
+	    </nav>
+	  </header>
+	  
+<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="formularioAceito.html">
+
+<p>
+<label>Nome
+<input id="NameField" type="text" name="customer_name" required>
+</label> 
+</p>
+
+<p>
+<label>Telefone
+<input id="NumberField" type="tel" name="phone_number" required>
+</label>
+</p>
+
+<p>
+<label>Email
+<input id="EmailField" type="email" name="email_address" required>
+</label>
+</p>
+
+<fieldset>
+<legend>Qual seu destino?</legend>
+<p><label class="choice"> <input type="radio" name="sao paulo" value="sao paulo"> Sao Paulo </label></p>
+<p><label class="choice"> <input type="radio" name="rio de janeiro" value="rio de janeiro"> Rio de Janeiro </label></p>
+<p><label class="choice"> <input type="radio" name="minas gerais" value="minas gerais"> Minas Gerais </label></p>
+</fieldset>
+
+<p>
+<label>Data da viagem
+<input id="DataPicker" type="date" name="pickup_time" required>
+</label>
+</p>
+	
+<p>
+<label>Plano
+<select id="plano" name="pickup_plano">
+<option value="" selected="selected">Selecione um dos planos disponiveis</option>
+<option value="plano basico" >Plano Basico</option>
+<option value="plano empresarial" >Plano Empresarial</option>
+<option value="plano especial" >Plano Especial</option>
+</select>
+</label> 
+</p>
+
+<p>
+<label>Observações
+<textarea id="commentsField" name="comments" maxlength="500"></textarea>
+</label>
+</p>
+
+<p><button id="confirmar" >Confirmar</button></p>
+
+</form>
+
+</body>
+</html>
